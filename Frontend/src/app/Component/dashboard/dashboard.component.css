@@ -1,0 +1,15 @@
+span {
+  font-variant-caps: small-caps;
+}
+
+img {
+  width: 30px;
+}
+
+.space {
+  width: 10px;
+}
+
+.nav-space {
+  flex: 1 1 auto;
+}

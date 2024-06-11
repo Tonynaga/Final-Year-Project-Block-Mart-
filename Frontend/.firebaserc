@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "block-mart-360ff": {
+      "hosting": {
+        "Frontend": [
+          "block-mart-360ff"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "block-mart-360ff"
+  }
+}

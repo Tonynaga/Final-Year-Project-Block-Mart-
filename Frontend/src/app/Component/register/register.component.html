@@ -1,0 +1,27 @@
+<mat-card class="example-card">
+  <p class="head">Registration</p>
+  <img mat-card-image class="logo" src="assets/images/Logo.png" alt="Logo">
+  <mat-card-content>
+    <div class="input">
+      <mat-form-field appearance="fill">
+        <mat-label>Enter your email</mat-label>
+        <input matInput [type]="email" placeholder="user@gmail.com" name="email" [(ngModel)]="email" required>
+      </mat-form-field>
+    </div>
+    <div class="input">
+      <mat-form-field appearance="fill">
+        <mat-label>Enter your password</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'" name="password" [(ngModel)]="password">
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon [ngStyle]="{'color':'white'}">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+      </mat-form-field>
+    </div>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="register()" [style.width.px]=325>REGISTER</button>
+  </mat-card-actions>
+  <div class="register">
+    Already a Member ? <a href="/login" class="reg">Login</a>
+  </div>
+</mat-card>

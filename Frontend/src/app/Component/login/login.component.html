@@ -1,0 +1,33 @@
+<mat-card class="example-card">
+  <p class="head">Welcome</p>
+  <img mat-card-image class="logo" src="assets/images/Logo.png" alt="Logo">
+  <mat-card-content>
+    <div class="input">
+      <mat-form-field appearance="fill">
+        <mat-label>Enter your email</mat-label>
+        <input matInput [type]="email" placeholder="user@gmail.com" name="email" [(ngModel)]="email" required>
+      </mat-form-field>
+    </div>
+    <div class="input">
+      <mat-form-field appearance="fill">
+        <mat-label>Enter your password</mat-label>
+        <input matInput [type]="hide ? 'password' : 'text'" name="password" [(ngModel)]="password">
+          <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+            <mat-icon [ngStyle]="{'color':'white'}">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+      </mat-form-field>
+    </div>
+  </mat-card-content>
+  <a href="/forgot-password" class="forgot">Forgot Password ?</a>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="login()" [style.width.px]=325>LOGIN</button>
+  </mat-card-actions>
+  <div class="social">
+      <button mat-fab (click)="signInWithGoogle()"><img src="assets/images/Google.png" alt="Google" width="24px" height="24px" class="icon"></button>
+      <span class="space"></span>
+      <button mat-fab (click)="signInWithFacebook()"><img src="assets/images/Facebook.png" alt="Facebook" width="24px" height="24px" class="icon"></button>
+  </div>
+  <div class="register">
+    Not a Member ? <a href="/register" class="reg">Register</a>
+  </div>
+</mat-card>
